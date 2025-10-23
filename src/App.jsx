@@ -10,16 +10,19 @@ function App() {
   return (
     <BrowserRouter>
     <Header />
-      <main className="main-content"></main>
+      <main className="main-content">
     <CartProvider>
-      <Nav />
       <Routes>
-        <Route path="/" element={<ItemListContainer />} />
+        {/* <Route path="/" element={<ItemListContainer />} />
         <Route path="/detail/:id" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer />} />
-
+        <Route path="/category/:categoryId" element={<ItemListContainer />} /> */}
+          <Route path="/" element={<ItemListContainer titulo="Bienvenidos" />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/detail/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h2>404 - Página no encontrada</h2>} />
       </Routes>
       </CartProvider>
+      </main>
     <Footer />
     </BrowserRouter>
   );

@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+}
+
+/* Para centrar y limitar el ancho del contenido */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 80vh;
+}
+
+/* Para evitar que el contenido se pegue a los bordes */
+h1, h2, h3, p {
+  margin: 0 0 1rem 0;
+}
