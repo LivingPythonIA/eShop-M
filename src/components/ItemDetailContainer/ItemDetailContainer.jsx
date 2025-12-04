@@ -10,8 +10,7 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     getProductsById(id)
     .then((data) => setDetail(data))
-    .catch((err) => {
-      console.log(err)
+    .catch((err) => {console.log(err)
     });
   },[id]);
   

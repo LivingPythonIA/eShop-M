@@ -9,16 +9,16 @@ export const ItemList = ({ list =[] }) => {
     return <p>Error al cargar los productos.</p>;
   }
   return (
-    <>
+   <div className="item-list-grid">
       {list.length ? (
         list.map((prod) => (
-            <Link to={`/detail/${prod.id}`} key={prod.id}>
-             <Item {...prod}/>
-          </Link>      
+          <Link to={`/detail/${prod.id}`} key={prod.id}>
+            <Item {...prod} />
+          </Link>
         ))
       ) : (
-                <p>No hay productos</p>
+        <p>No hay productos</p>
       )}
-    </>
+    </div>
   );
 };

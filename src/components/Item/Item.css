@@ -7,11 +7,16 @@
   color: #f5f5f5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
 }
 
 .product-item img {
   width: 100%;
   height: auto; /* mantiene proporción */
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
 }
 
@@ -28,6 +33,7 @@
 
 .product-item p {
   margin: 0.375rem 0; /* 6px */
+  font-size: 0.95rem;
 }
 
 .product-title {
@@ -44,4 +50,12 @@
 }
 .product-actions .btn .btn-add {
   margin: 1rem;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .product-item {
+    max-width: 95%;
+    margin-bottom: 1.5rem;
+  }
 }
