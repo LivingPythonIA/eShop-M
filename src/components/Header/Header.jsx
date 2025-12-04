@@ -8,10 +8,8 @@
 //     </header>
 //   );
 // };
-
-import "./Header.css";
 import { Nav } from "../Nav/Nav";
-
+import "./Header.css";
 export const Header = () => {
   return (
     <header className="header">
@@ -19,7 +17,6 @@ export const Header = () => {
         {/* <h1 className="logo">🛍️ eShop</h1> */}
        <h1 className="logo">
   <span role="img" aria-label="bag">🛍️</span> eShop </h1>
-
         <Nav />
       </div>
     </header>

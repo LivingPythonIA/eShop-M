@@ -1,17 +1,24 @@
-import { useCartContext } from "../../context/useCartContext";  
-import { Item } from "../Item/Item";
+import { Item } from "../Item/Item"
+import { Count } from "../Count/Count"
+import { useCartContext } from "../../context/CartContext/useCartContext"
+import './ItemDetail.css'
 
-export const ItemDetail = ({ detail }) => { 
-    const { addItem } = useCartContext();
-        return ( 
-        <Item {...detail}>
-            <button
-            onClick={() => {
-                addItem(detail);
-            }}
-            >
-                Agregar al carrito
-            </button>
-        </Item>
-    );
-};
+export const ItemDetail = ({detail}) => {
+  const {addItem} = useCartContext()
+
+  const handleAdd = (quantity) => {
+    addItem({...detail, quantity})
+  }
+
+  return (
+    <div className="container-detail">
+      <h2>Detalle del producto:</h2>
+      <Item {...detail}>
+        <p>{detail.info}</p>
+        <p>Envios sin cargo dentro de Morón Centro</p>
+        <Count btnText={"Agregar al carrito"} onConfirm={handleAdd}/>
+      </Item>
+    </div>
+
+  )
+}
