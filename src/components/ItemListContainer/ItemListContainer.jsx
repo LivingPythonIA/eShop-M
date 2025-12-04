@@ -20,7 +20,7 @@ export const ItemListContainer = ({titulo}) => {
   return (
     <section >
       <h2>{titulo}<span className="text-category">{category}</span></h2>
-      <ItemList lista={products}/>
+      <ItemList list={products}/>
     </section>
   )
 }
